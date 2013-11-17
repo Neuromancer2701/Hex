@@ -1,0 +1,37 @@
+/*
+ * Hex.cpp
+ *
+ *  Created on: Nov 16, 2013
+ *      Author: count zero
+ */
+
+#include "Hex.h"
+
+Hex::Hex() {
+	// TODO Auto-generated constructor stub
+	direction_characters.push_back('\\');
+	direction_characters.push_back('/');
+	direction_characters.push_back('\_');
+	direction_characters.push_back('\_');
+	direction_characters.push_back('\/');
+	direction_characters.push_back('\\');
+
+	state_characters.push_back('.');
+	state_characters.push_back('O');
+	state_characters.push_back('X');
+}
+
+Hex::~Hex() {
+	// TODO Auto-generated destructor stub
+}
+
+
+void Hex::DrawGraph()
+{
+	//board.nodes.state
+	//board.size
+
+
+
+
+}

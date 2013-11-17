@@ -1,0 +1,72 @@
+/*
+ * Hex.cpp
+ *
+ *  Created on: Nov 16, 2013
+ *      Author: count zero
+ */
+
+#include "Hex.h"
+
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+Hex::Hex() {
+	// TODO Auto-generated constructor stub
+	direction_characters.push_back('\\');
+	direction_characters.push_back('/');
+	direction_characters.push_back('-');
+	direction_characters.push_back('-');
+	direction_characters.push_back('/');
+	direction_characters.push_back('\\');
+
+	state_characters.push_back('.');
+	state_characters.push_back('O');
+	state_characters.push_back('X');
+
+}
+
+Hex::~Hex() {
+	// TODO Auto-generated destructor stub
+}
+
+
+void Hex::DrawGraph()
+{
+	vector<Node>::iterator node = board.nodes.begin();
+	for(int i = 0 ; i < board.size; i++)
+	{
+		fill_line	<< '\\' ;
+		if(i != (board.size-1))
+		{
+			fill_line << " " << '/';
+		}
+	}
+
+
+
+	for(int i = 0; i < board.size; i++)
+	{
+		for(int j = 0; j < board.size; j++)
+		{
+			hex_board << state_characters.at((int)(*node).state);
+			if(j != (board.size - 1))
+			{
+				hex_board << direction_characters[2];
+			}
+			else
+			{
+				hex_board  << endl;
+			}
+			++node;
+		}
+
+		if(i != (board.size - 1))
+		{
+			hex_board << fill_line.str() << endl;
+		}
+
+	}
+
+}

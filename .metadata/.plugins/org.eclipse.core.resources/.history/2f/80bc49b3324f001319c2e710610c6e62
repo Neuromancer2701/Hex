@@ -1,0 +1,24 @@
+//============================================================================
+// Name        : Hex.cpp
+// Author      : 
+// Version     :
+// Copyright   : 
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include "Hex.h"
+
+
+int main() {
+
+	Hex game;
+
+	game.board.GenerateGraph(7);
+
+	game.DrawGraph();
+
+	cout << game.hex_board << endl; // prints
+	return 0;
+}

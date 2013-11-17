@@ -1,0 +1,28 @@
+/*
+ * Hex.cpp
+ *
+ *  Created on: Nov 16, 2013
+ *      Author: count zero
+ */
+
+#include "Hex.h"
+
+Hex::Hex() {
+	// TODO Auto-generated constructor stub
+	direction_characters.push_back('\\');
+	direction_characters.push_back('\/');
+}
+
+Hex::~Hex() {
+	// TODO Auto-generated destructor stub
+}
+
+
+void Hex::DrawGraph()
+{
+	board.nodes[]
+
+
+
+
+}

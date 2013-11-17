@@ -1,0 +1,266 @@
+11:41:05 **** Clean-only build of configuration Debug for project Hex ****
+rm -rf main.o Edge.d Graph.d Graph.o Node.o Hex.exe Edge.o main.d Node.d 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\MinGW\bin;\bin;C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Python27;C:\Program Files\Java\jre7\bin;C:\MinGW\bin;C:\Program Files\Python27\Scripts]
+
+11:41:05 **** Clean-only build of configuration Debug for project Hex ****
+16:15:18 **** Rebuild of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Edge.o "..\\Edge.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Node.o "..\\Node.cpp" 
+g++ -o Hex.exe main.o Node.o Graph.o Edge.o 
+18:28:13 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\Hex.cpp: In constructor 'Hex::Hex()':
+..\Hex.cpp:10:10: error: no matching function for call to 'Graph::Graph()'
+..\Hex.cpp:10:10: note: candidates are:
+..\/Graph.h:25:2: note: Graph::Graph(int)
+..\/Graph.h:25:2: note:   candidate expects 1 argument, 0 provided
+..\/Graph.h:19:7: note: Graph::Graph(const Graph&)
+..\/Graph.h:19:7: note:   candidate expects 1 argument, 0 provided
+..\/Graph.h:19:7: note: Graph::Graph(Graph&&)
+..\/Graph.h:19:7: note:   candidate expects 1 argument, 0 provided
+18:33:34 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Node.o "..\\Node.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+18:33:57 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+18:41:35 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+20:36:31 **** Rebuild of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\Hex.cpp:13:33: warning: unknown escape sequence: '\/' [enabled by default]
+..\Hex.cpp:14:33: warning: unknown escape sequence: '\_' [enabled by default]
+..\Hex.cpp:15:33: warning: unknown escape sequence: '\_' [enabled by default]
+..\Hex.cpp:16:33: warning: unknown escape sequence: '\/' [enabled by default]
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Edge.o "..\\Edge.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Node.o "..\\Node.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+20:36:59 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+21:30:45 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Node.o "..\\Node.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\/Graph.h: In constructor 'Hex::Hex()':
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:28:29: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:31:18: error: within this context
+..\/Graph.h: In member function 'void Hex::DrawGraph()':
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:48:27: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:50:28: error: within this context
+..\Hex.cpp:52:48: error: no matching function for call to 'std::vector<char>::at(State&)'
+..\Hex.cpp:52:48: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:735:7: note: std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::at(std::vector<_Tp, _Alloc>::size_type) [with _Tp = char, _Alloc = std::allocator<char>, std::vector<_Tp, _Alloc>::reference = char&, std::vector<_Tp, _Alloc>::size_type = unsigned int]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:735:7: note:   no known conversion for argument 1 from 'State' to 'unsigned int'
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:753:7: note: std::vector<_Tp, _Alloc>::const_reference std::vector<_Tp, _Alloc>::at(std::vector<_Tp, _Alloc>::size_type) const [with _Tp = char, _Alloc = std::allocator<char>, std::vector<_Tp, _Alloc>::const_reference = const char&, std::vector<_Tp, _Alloc>::size_type = unsigned int]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:753:7: note:   no known conversion for argument 1 from 'State' to 'unsigned int'
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:53:19: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:60:18: error: within this context
+..\Hex.cpp:68:21: error: 'std::vector<Node>::iterator' has no member named 'state'
+..\Hex.cpp:69:3: error: expected ';' before 'board'
+21:31:36 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\/Graph.h: In constructor 'Hex::Hex()':
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:28:29: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:31:18: error: within this context
+..\/Graph.h: In member function 'void Hex::DrawGraph()':
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:48:27: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:50:28: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:53:19: error: within this context
+..\/Graph.h:23:6: error: 'int Graph::size' is private
+..\Hex.cpp:60:18: error: within this context
+..\Hex.cpp:68:21: error: 'std::vector<Node>::iterator' has no member named 'state'
+..\Hex.cpp:69:3: error: expected ';' before 'board'
+21:35:25 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+21:35:50 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+21:43:14 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\/Hex.h: In function 'int main()':
+..\/Hex.h:23:9: error: 'Graph Hex::board' is private
+..\main.cpp:17:7: error: within this context
+..\main.cpp:17:26: error: invalid conversion from 'Graph*' to 'int' [-fpermissive]
+..\/Graph.h:25:2: error:   initializing argument 1 of 'Graph::Graph(int)' [-fpermissive]
+..\/Hex.h:27:16: error: 'std::stringstream Hex::hex_board' is private
+..\main.cpp:20:15: error: within this context
+21:48:05 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Graph.o "..\\Graph.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+21:48:15 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+21:48:39 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+21:50:50 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+21:51:58 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+21:53:47 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+21:55:26 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:00:38 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+Info: Nothing to build for Hex
+22:01:28 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:05:23 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+22:05:44 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+Info: Nothing to build for Hex
+22:08:23 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:10:40 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:12:44 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\Hex.cpp:24:29: warning: multi-character character constant [-Wmultichar]
+..\Hex.cpp: In constructor 'Hex::Hex()':
+..\Hex.cpp:24:34: warning: overflow in implicit constant conversion [-Woverflow]
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+22:14:02 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:17:12 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+Info: Nothing to build for Hex
+22:17:42 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+..\Hex.cpp:39:15: warning: multi-character character constant [-Wmultichar]
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:17:53 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:19:07 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:22:16 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+22:22:19 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:23:00 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:23:58 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:26:42 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:27:08 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:27:29 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o Hex.o "..\\Hex.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex
+22:27:57 **** Incremental Build of configuration Debug for project Hex ****
+Info: Internal Builder is used for build
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Hex.exe main.o Node.o Hex.o Graph.o Edge.o 
+Info: Nothing to build for Hex

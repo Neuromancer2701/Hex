@@ -1,0 +1,20 @@
+/*
+ * Hex.h
+ *
+ *  Created on: Nov 16, 2013
+ *      Author: count zero
+ */
+
+#ifndef HEX_H_
+#define HEX_H_
+
+#include "Graph.h"
+
+class Hex: public Graph {
+public:
+	Hex();
+	void DrawGraph();
+	virtual ~Hex();
+};
+
+#endif /* HEX_H_ */

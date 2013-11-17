@@ -1,0 +1,41 @@
+/*
+ * Graph.cpp
+ *
+ *  Created on: Oct 25, 2013
+ *      Author: SK1033
+ */
+
+#include "Graph.h"
+#include <vector>
+#include <set>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+
+using std::cout;
+using std::endl;
+using std::vector;
+using std::multiset;
+using std::ifstream;
+
+
+
+
+// Density valid range 1-100;
+// Size valid positive integer
+
+Graph::Graph(int size) {
+	Node n;
+	srand (time(NULL));
+	for(int i = 0; i < size; i++ )
+	{
+		n.name = i;
+		nodes.push_back(n);
+	}
+}
+
+Graph::~Graph() {
+	// TODO Auto-generated destructor stub
+}
+
