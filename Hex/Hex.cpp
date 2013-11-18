@@ -97,17 +97,25 @@ void Hex::DrawGraph()		//Draws Hex board from node status stored in the
 {
 	string spaces =  " ";
 	vector<Node>::iterator node = board.nodes.begin();
-	fill_line	<< " " ;
+	static bool do_once = true;
 
-	for(int i = 0 ; i < board.size; i++)  //Create the \ / line inbetween the nodes
+	fill_line << ""; //Clear fill line
+	hex_board << ""; //Clear Hex board
+
+	if(do_once)
 	{
-		fill_line	<< '\\' ;
-		if(i != (board.size-1))
+		do_once = false;
+		fill_line	<< " " ;
+
+		for(int i = 0 ; i < board.size; i++)  //Create the \ / line inbetween the nodes
 		{
-			fill_line << "  " << '/';
+			fill_line	<< '\\' ;
+			if(i != (board.size-1))
+			{
+				fill_line << "  " << '/';
+			}
 		}
 	}
-
 
 
 	for(int i = 0; i < board.size; i++)			// Two nested for loops  builds the hex board

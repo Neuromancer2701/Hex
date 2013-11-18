@@ -16,7 +16,6 @@ int main() {
 	Hex game;
 
 	game.board.GenerateGraph(11); // Generate Graph of 11 by 11
-
 	while(!game.Winner())		 // Test for Winner
 	{
 		game.DrawGraph();		// Draw Current Board
