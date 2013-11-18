@@ -19,11 +19,12 @@ class Hex {
 		virtual ~Hex();
 
 		void DrawGraph();
-
+		bool Winner();
 		void ReadInputs();
 		stringstream hex_board;
 		Graph board;
 		stringstream fill_line;
+		State winner;
 
 	private:
 

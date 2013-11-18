@@ -28,6 +28,10 @@ public	:
 	void GenerateGraph(int size);
 	bool ValidNode(int x, int y);
 	void Move(State state, int x, int y);
+
+	bool Player1Winner();
+	bool Player2Winner();
+
 	int size;
 	vector<Node>  nodes;  //vector of nodes
 

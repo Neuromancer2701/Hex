@@ -14,15 +14,15 @@ using std::cout;
 using std::endl;
 
 Hex::Hex() {
-	// TODO Auto-generated constructor stub
-	direction_characters.push_back('\\');
+
+	direction_characters.push_back('\\');	//vector of edge characters
 	direction_characters.push_back('/');
 	direction_characters.push_back('_');
 	direction_characters.push_back('_');
 	direction_characters.push_back('/');
 	direction_characters.push_back('\\');
 
-	state_characters.push_back('.');
+	state_characters.push_back('.');	// Vector of State characters
 	state_characters.push_back('O');
 	state_characters.push_back('X');
 
@@ -30,6 +30,25 @@ Hex::Hex() {
 
 Hex::~Hex() {
 	// TODO Auto-generated destructor stub
+}
+
+bool Hex::Winner()
+{
+	bool return_value = false;
+
+	if(board.Player1Winner())
+	{
+		winner = State::X;
+		return_value = true;
+	}
+
+	if(board.Player2Winner())
+	{
+		winner = State::O;
+		return_value = true;
+	}
+
+	return return_value;
 }
 void Hex::ReadInputs()
 {
@@ -52,6 +71,11 @@ void Hex::ReadInputs()
 		}
 	}
 
+	if(Winner())
+	{
+		return;
+	}
+
 	cout << "Player 2 enter Coordinates for your move" << endl;
 	while(true)
 	{
@@ -69,13 +93,13 @@ void Hex::ReadInputs()
 	}
 }
 
-void Hex::DrawGraph()
+void Hex::DrawGraph()		//Draws Hex board from node status stored in the
 {
 	string spaces =  " ";
 	vector<Node>::iterator node = board.nodes.begin();
 	fill_line	<< " " ;
 
-	for(int i = 0 ; i < board.size; i++)
+	for(int i = 0 ; i < board.size; i++)  //Create the \ / line inbetween the nodes
 	{
 		fill_line	<< '\\' ;
 		if(i != (board.size-1))
@@ -86,7 +110,7 @@ void Hex::DrawGraph()
 
 
 
-	for(int i = 0; i < board.size; i++)
+	for(int i = 0; i < board.size; i++)			// Two nested for loops  builds the hex board
 	{
 		hex_board << spaces;
 		for(int j = 0; j < board.size; j++)

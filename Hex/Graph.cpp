@@ -11,7 +11,9 @@
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 
+using std::find;
 using std::cout;
 using std::endl;
 using std::multiset;
@@ -45,10 +47,12 @@ void Graph::GenerateGraph(int _size) {
 Graph::~Graph() {
 	// TODO Auto-generated destructor stub
 }
+
+// Is this a valid free node
 bool  Graph::ValidNode(int x, int y)
 {
 	bool return_value = false;
-	int node_name = x * size + y;
+	unsigned int node_name = x * size + y;
 
 	if(node_name < nodes.size())
 	{
@@ -60,15 +64,111 @@ bool  Graph::ValidNode(int x, int y)
 
 	return return_value;
 }
-
+// Set Node to occupied by state
 void Graph::Move(State state, int x, int y)
 {
 	int node_name = x * size + y;
 	nodes[node_name].state = state;
 }
 
+bool Graph::Player1Winner()
+{
+	bool return_value = false;
 
+	vector<int> start_nodes;  //Top of the Hex board
+	vector<int> end_nodes;	  //Bottom Of the Hex Board
 
+	vector<int> tree;
+	vector<Node> openlist;
+
+	for(int i = 0; i < size; i++)
+	{
+		start_nodes.push_back(i);
+		end_nodes.push_back((size * size) - (i+1));
+	}
+
+	for( auto i : start_nodes)
+	{
+		openlist.push_back(nodes[i]);
+	}
+
+	//Create a tree starting Top nodes Winner when tree includes a start node and end node.
+	while(openlist.size() > 0)
+	{
+		if(openlist[0].state == State::X)
+		{
+			for( auto edge :openlist[0].Edges)
+			{
+				openlist.push_back(nodes[edge.destination]);
+			}
+			tree.push_back(openlist[0].name);
+			openlist.erase(openlist.begin());
+		}
+		else
+		{
+			openlist.erase(openlist.begin());
+		}
+
+		for( auto end : end_nodes)
+		{
+			if(find(tree.begin(), tree.end(), end) != tree.end() )
+			{
+				return_value = true;
+			}
+		}
+	}
+	return return_value;
+}
+
+bool Graph::Player2Winner()
+{
+	bool return_value = false;
+	vector<int> start_nodes;  	//Left of the Hex board
+	vector<int> end_nodes;	  	//Right Of the Hex Board
+
+	vector<int> tree;			// Path to victor
+	vector<Node> openlist;		//List of Nodes connected to a
+
+	for(int i = 0; i < size; i++)
+	{
+		start_nodes.push_back(i * size );
+		end_nodes.push_back((i * size) + size);
+	}
+
+	for( auto i : start_nodes)
+	{
+		openlist.push_back(nodes[i]);
+	}
+
+	//Create a tree starting Top nodes Winner when tree includes a start node and end node.
+	while(openlist.size() > 0)
+	{
+		if(openlist[0].state == State::O)
+		{
+			for( auto edge :openlist[0].Edges)
+			{
+				openlist.push_back(nodes[edge.destination]);
+			}
+			tree.push_back(openlist[0].name);
+			openlist.erase(openlist.begin());
+		}
+		else
+		{
+			openlist.erase(openlist.begin());
+		}
+
+		for( auto end : end_nodes)
+		{
+			if(find(tree.begin(), tree.end(), end) != tree.end() )
+			{
+				return_value = true;
+			}
+		}
+	}
+
+	return return_value;
+}
+// Creates Edges for each Node
 void Graph::FillEdges(Node& node)
 {
 	Edge edge;
